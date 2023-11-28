@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "tc.crm.botclient.admin": "StartDebugging",
+        "tc.crm.bot.admin": "StartDebugging"
+      }
+    }
+  }
+}

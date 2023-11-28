@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  tc.crm.bot.admin:
+    image: ${DOCKER_REGISTRY-}tccrmbotadmin
+    build:
+      context: .
+      dockerfile: TC.CRM.BotClient.Admin/Dockerfile
+    environment:
+      - TOKEN_LOGTAIL=k7mYcJcrckGktw7o3SPBKvmH
+      #- BotToken=6354407705:AAEZKEBuO-XIKfzYROzjoAoAKrnoIRSZjGY
+      - BotToken=5885856244:AAFOO4yU5RK7Fl_w-5EDdT3lG6xsJcTOTbM
+      - DB_CS=host=host.docker.internal;port=5627;database=TC.CRM.Bot;username=postgres;password=98GerodoT98;
+      #- DB_CS=server=host.docker.internal;user id=root;password=627corrupted627;database=TC.CRM.Bot.Admin
+      - HostAddress=https://1c43-95-25-156-178.ngrok.io
+      #- GoogleSheetId=1h-4wl9DuHhnGUTSOxihhGEPXwID_E4gyuxP2pIjn51o
+      #- GoogleSheetId=1irb6d5bsK4HiU7URSS8CGVZOSYR19HhoH67eSYTSDH8
+    ports:
+      - "23400:80"
+      - "23401:443"
